@@ -2,7 +2,7 @@
 function getComputerChoice() {
   const computerChoices = ["rock", "paper", "scissors"];
 
-  //selct a random item form the array cpuChoices
+  //selct a random item from the array computerChoices
   const randomIndex = Math.floor(Math.random() * computerChoices.length);
 
   const computerChoice = computerChoices[randomIndex];
@@ -45,7 +45,7 @@ function game() {
   }
   if (playerScore < 0) {
     console.log("You lost. Would you like to try again?");
-  } else if (player === 0) {
+  } else if (playerScore === 0) {
     console.log("You tied this time. Good Game!");
   } else console.log("YOU WON!!!");
 }
