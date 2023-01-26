@@ -13,17 +13,18 @@ function getComputerChoice() {
 
 //play a round of Rock Paper Scissors
 function playRound(playerSelection, computerSelection) {
+  let victoryPhrase = "You won this round, great job!";
   if (playerSelection === computerSelection) {
     console.log("You tied this round");
     return 0;
   } else if (playerSelection === "rock" && computerSelection === "scissors") {
-    console.log("You won this round, gret job!");
+    console.log(victoryPhrase);
     return 1;
   } else if (playerSelection === "paper" && computerSelection === "rock") {
-    console.log("You won this round, gret job!");
+    console.log(victoryPhrase);
     return 1;
   } else if (playerSelection === "scissors" && computerSelection === "paper") {
-    console.log("You won this round, gret job!");
+    console.log(victoryPhrase);
     return 1;
   } else {
     console.log("You lost this round, better luck next time.");
@@ -44,7 +45,7 @@ function game() {
     playerScore += playRound(lowerCaseUserChoice, getComputerChoice());
   }
   if (playerScore < 0) {
-    console.log("You lost. Would you like to try again?");
+    console.log("You lost this game. Would you like to try again?");
   } else if (playerScore === 0) {
     console.log("You tied this time. Good Game!");
   } else console.log("YOU WON!!!");
